@@ -1,17 +1,195 @@
-<html>
-    
-    <head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel='stylesheet' href="/css/services.css">
+    <title>User Dashboard - Events By Param</title>
+  </head>
+  <body>
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light static-top">
+     
+      <div class="container">
+          <a class="navbar-brand d-lg-none" href="/">
+              <!--<img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" alt="..." height="36">-->
+              <img src="/img/logo.svg" class="logo" alt="..." width="200">
+          </a>
 
-    </head>
-    <body>
-    
-    <h1>Dallas Cowboys</h1>
-    <p>The Dallas Cowboys are one of the most iconic brands in all sports. They’re known not only nationwide, but around the world. Experiencing a game at AT&T stadium should be on every sports fan bucket list. If you’re interested in learning more about them, check out the following fun facts about the Dallas Cowboys.</p>
-    
-    </body>
-    <h2>Fun Facts about the Dallas Cowboys!</h2>
-    <p>#1 – The Dallas Cowboys franchise was granted on January 28, 1960! Just last year they celebrated their 60th year as a team.</p>
-    <p>#2 Since their founding, they’ve won FIVE Superbowl’s, which ties them for 3rd place with the San Francisco 49ers. And they follow The Pittsburg Steelers and New England Patriots who are both tied with six wins.</p>
-    <p>#3 They’ve won 8 NFC championships. Unfortunately, the bulk of those was in the ’70s to ’90s. They have not won an NFC championship since 1995.</p>
-    <img src="https://a.espncdn.com/i/teamlogos/nfl/500/dal.png">
+        <button id="collapseBtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="container d-none d-lg-block">
+          <a class="navbar-brand" href="/">
+               <!--<img src="https://placeholder.pics/svg/150x50/888888/EEE/Logo" alt="..." height="36">-->
+               <img src="/img/logo.svg" class="logo" alt="..." width="200">
+           </a>
+       </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+              <li class="nav-item px-4 d-lg-none">
+                  <a class="nav-link" href="/login">Sign Up</a>
+              </li>
+            <li class="nav-item px-4">
+              <a class="nav-link"   href="/">Home</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="/gallery">Gallery</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link active" aria-current="page" href="#">Services</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+         
+          <div class="container d-none d-lg-block">
+            <!--
+              <button type="button" class="btn button-float-right sign-up btn-dark"><a class="sign-up-link" href="/login">Sign up</a></button>
+              <button type="button" class="btn button-float-right btn-light"><a class="sign-in-link" href="/login">Sign in</a></button>
+              -->
+              <a class="btn button-float-right sign-up btn-dark sign-up-link" href="/signup">Account</a>
+              <a class="btn button-float-right btn-outline-dark sign-in-link" href="/login">Log out</a>
+              
+          </div>
+
+
+
+      </div>
+
+    </nav>
+
+    <main id="container">
+      <div class="container">
+        <h2 class="text-center mt-4">Param Events</h2>
+        <h4 class="text-center mt-4">Your Account</h4>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdWERCMafVYXg9UYN8FUce7bqrdQLmQSShA&usqp=CAU" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Edit Profile</h5>
+                          <p class="card-text">Manage user profile and Change Password</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-grid">
+                                <button class="btn btn-dark btn" id="submitButton" type="submit">Edit My Profile</button>
+                            </div>
+                        </div>
+                      </div>
+
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.kindpng.com/picc/m/280-2801416_customer-order-orders-icon-clipart-png-download-order.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Your Orders</h5>
+                          <p class="card-text">View Orders, Invoice, Confirmation Number</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-grid">
+                                <button class="btn btn-dark btn" id="submitButton" type="submit">Select Orders</button>
+                            </div>
+                        </div>
+                      </div>
+                    
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="https://www.eriehomeinspectors.com/wp-content/uploads/2016/06/Testimonial-Icon.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Create Testimonial</h5>
+                          <p class="card-text">Leave a Customer Review</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-grid">
+                                <button class="btn btn-dark btn" id="submitButton" type="submit">Edit Customer Review</button>
+                            </div>
+                        </div>
+                      </div>
+                    
+                </div>
+
+           
+                
+                
+                
+
+            </div>
+
+            
+        </div>
+        
+
+      </div>
+
+    </main>
+
+
+    <footer class="footer mt-auto py-3 bg-dark fixed-bottom">
+      <div class="container">
+        <!--<span class="text-muted">Events By Param &copy 2021</span>-->
+        <div class="row">
+          <div class="col-md-4 footer-copy-block d-lg-none justify-content-center">
+            <span class="footer-copy-text">Events By Param &copy 2021</span>
+          </div>
+          <div class="col-md-4 footer-copy-block d-none d-lg-flex">
+            <span class="footer-copy-text">Events By Param &copy 2021</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link footer-a"   href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link footer-a" href="/gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link footer-a active" aria-current="page" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link footer-a" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 social-icons d-none d-lg-block">
+            <span><img src="/img/f.png" height="40"></span>
+            <span><img src="/img/i.png" height="40"></span>
+            <span><img src="/img/t.png" height="40"></span>  
+          </div>
+          <div class="col-md-4 social-icons-mobile d-lg-none">
+            <span><img src="/img/f.png" height="40"></span>
+            <span><img src="/img/i.png" height="40"></span>
+            <span><img src="/img/t.png" height="40"></span>  
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- when user click collapse button -->
+    <script>
+      const collapseBtn = document.getElementById('collapseBtn');
+      const container = document.getElementById('container');
+      collapseBtn.addEventListener('click', () => {
+        if(collapseBtn.getAttribute('aria-expanded') == 'true') {
+          container.style.cssText += 'margin-top: 170px;';
+        } else {
+          container.style.cssText += 'margin-top: 0px;';
+        }
+        
+      });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>>
