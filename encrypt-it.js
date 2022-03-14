@@ -18,19 +18,18 @@
     // Note: In this function, we usually want to set up our event handlers
     // for UI elements on the page.
     const font12Radio = document.getElementById('font12');
-    font12Radio.addEventListener('click', font12);
-
+    const resetBtn = document.getElementById('reset')
     const font24Radio = document.getElementById('font24');
-    font24Radio.addEventListener('click', font24);
-
     const allCapBtn = document.getElementById('all-caps');
+    const encryptBtn = document.getElementById('encrypt-it');
+    
+    font12Radio.addEventListener('click', font12);
+    resetBtn.addEventListener('click', resetFunction);
+    encryptBtn.addEventListener('click', handleClick);
+    font24Radio.addEventListener('click', font24);
     allCapBtn.addEventListener('click', allCapsFunction);
 
-    const encryptBtn = document.getElementById('encrypt-it')
-    encryptBtn.addEventListener('click', handleClick);
-
-    const resetBtn = document.getElementById('reset')
-    resetBtn.addEventListener('click', resetFunction);
+   
 
   }
   // Add any other functions in this area (you should not implement your
@@ -81,7 +80,7 @@
       textarea.value = textarea.value.toUpperCase();
 
     }
-    
+
   }
 
   function shiftCipher(text) {
